@@ -54,8 +54,10 @@ const Branch = mongoose.model("branch",BranchSchema)
 
 const masterSchema = new mongoose.Schema(
     {
+        userdetail :{type:mongoose.Schema.Types.ObjectId, ref:"user",required:true},
         balance : {type:String, required:true},
-               
+        branchinfo : {type:mongoose.Schema.Types.ObjectId, ref:"branch",required:true},       
+        userdetail :{type:mongoose.Schema.Types.ObjectId, ref:"fixed",required:true},
     },
     {
         timestamps:true
